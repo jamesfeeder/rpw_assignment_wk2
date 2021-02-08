@@ -1,8 +1,47 @@
 @import "reset.css";
+#color {
+    color: rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.35);
+    color: rgba(0, 0, 0, 0.25);
+    color: rgba(0, 0, 0, 0.35);
+}
+
 .default-padding {
     width: 100%;
     padding: 0vw 15vw;
     box-sizing: border-box;
+}
+
+.button {
+    transition: 250ms;
+    color: white;
+    border-radius: 8px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 2px transparent solid;
+    border-radius: 8px;
+}
+
+.button:hover {
+    /* border: 2px rgba(255, 255, 255, 0.35) solid; */
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.button-outlined {
+    transition: 250ms;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 2px rgba(255, 255, 255, 0.35) solid;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.button-outlined:hover {
+    color: dodgerblue;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px rgba(255, 255, 255, 0.35) solid;
+    border-radius: 8px;
+    padding: 8px;
 }
 
 .navbar {
@@ -23,24 +62,32 @@
 }
 
 .navbar ul {
-    background-color: crimson;
     display: flex;
     flex-direction: row;
 }
 
 .navbar li {
-    background-color: darkgray;
-    height: 48px;
-    padding: 0px 8px;
-    margin: 0px 8px;
+    height: 38px;
+    padding: 0px 16px;
+    margin: 0px 4px;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+}
+
+.navbar li:first-child {
+    margin-left: 0px;
+}
+
+.navbar li:last-child {
+    margin-right: 0px;
 }
 
 .hero {
     /* background-color: green; */
-    height: 80vh;
+    min-height: 400px;
+    max-height: 80vh;
     width: 100%;
     position: relative;
 }
@@ -55,7 +102,7 @@
 }
 
 .hero>div {
-    bottom: 10vh;
+    bottom: 10%;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -76,11 +123,7 @@
 
 .hero>div>button {
     color: white;
-    background-color: rgba(255, 255, 255, 0.25);
-    border: 2px rgba(255, 255, 255, 0.35) solid;
-    border-radius: 8px;
     margin-top: 24px;
-    padding: 8px;
     font-size: 1.4em;
 }
 
@@ -89,6 +132,7 @@
     height: 600px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
     box-sizing: border-box;
 }
 
