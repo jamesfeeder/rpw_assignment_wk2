@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -113,9 +113,9 @@ section {
 
 body {
     /* Modified */
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik';
     line-height: 1.2;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 ol,

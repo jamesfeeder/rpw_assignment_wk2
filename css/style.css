@@ -4,49 +4,51 @@
     color: rgba(255, 255, 255, 0.35);
     color: rgba(0, 0, 0, 0.25);
     color: rgba(0, 0, 0, 0.35);
+    color: #024347;
+    color: #21b6bc;
+    color: #8ee0e6;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .default-padding {
     width: 100%;
-    padding: 0vw 15vw;
+    padding: 0vw 20vw;
     box-sizing: border-box;
 }
 
 .button {
     transition: 250ms;
-    color: white;
     border-radius: 8px;
     padding: 8px;
     box-sizing: border-box;
     border: 2px transparent solid;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
 .button:hover {
-    /* border: 2px rgba(255, 255, 255, 0.35) solid; */
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.10);
 }
 
 .button-outlined {
     transition: 250ms;
-    color: white;
     background-color: rgba(255, 255, 255, 0.25);
     border: 2px rgba(255, 255, 255, 0.35) solid;
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 8px;
 }
 
 .button-outlined:hover {
-    color: dodgerblue;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 2px rgba(255, 255, 255, 0.35) solid;
-    border-radius: 8px;
-    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px rgba(255, 255, 255, 0.25) solid;
 }
 
 .navbar {
-    background-color: cornflowerblue;
-    height: 88px;
+    background-color: white;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.35);
+    height: 56px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -56,9 +58,8 @@
 }
 
 .navbar .logo {
-    background-color: gray;
-    padding: 8px;
-    /* height: 48px; */
+    padding-right: 8px;
+    font-size: 1.6em;
 }
 
 .navbar ul {
@@ -84,6 +85,11 @@
     margin-right: 0px;
 }
 
+.navbar li>a {
+    text-decoration: none;
+    color: black;
+}
+
 .hero {
     /* background-color: green; */
     min-height: 400px;
@@ -99,10 +105,11 @@
     max-height: 80vh;
     width: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 .hero>div {
-    bottom: 10%;
+    bottom: 15%;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -111,49 +118,123 @@
     text-align: center;
 }
 
-.hero>div>h {
+.hero>div>h1 {
     color: white;
     font-size: 4.2em;
 }
 
 .hero>div>p {
+    margin-top: 16px;
     color: white;
-    font-size: 1.4em;
+    font-size: 1.3em;
 }
 
 .hero>div>button {
     color: white;
     margin-top: 24px;
-    font-size: 1.4em;
+    font-size: 1.2em;
+    backdrop-filter: blur(16px) saturate(200%) brightness(200%);
+}
+
+.content-bg {
+    background: rgb(2, 67, 71);
+    background: linear-gradient(128deg, rgba(2, 67, 71, 1) 0%, rgba(33, 182, 188, 1) 87%, rgba(142, 224, 230, 1) 100%);
 }
 
 .grid-content {
-    padding: 48px 15vw;
-    height: 600px;
+    padding: 24px 20vw;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 16px;
     box-sizing: border-box;
 }
 
-.grid-item1 {
-    background-color: orange;
-    grid-row-start: 1;
-    grid-row-end: 3
+.grid-title {
+    margin-bottom: 8px;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    /* height: 48px; */
 }
 
-.grid-item2 {
-    background-color: teal;
+.grid-title h1 {
+    color: white;
+    font-size: 2.4em;
 }
 
-.grid-item3 {
-    background-color: teal;
+.grid-item {
+    transition: 250ms;
+    background-color: white;
+    height: 15vh;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.grid-item4 {
-    background-color: teal;
+.grid-item p {
+    margin: 8px;
+    color: #024347;
+    font-size: 1em;
 }
 
-.grid-item5 {
-    background-color: teal;
+.grid-item h2 {
+    color: #024347;
+    margin: 8px;
+    font-size: 1.4em;
+}
+
+.grid-item:hover {
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+#chemical-layer {
+    padding: 48px 20vw 24px;
+}
+
+#mechanical-layer {
+    padding: 24px 20vw 48px;
+}
+
+#footer {
+    height: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#footer h2 {
+    font-size: 1.6em;
+}
+
+#footer iframe {
+    margin-top: 8px;
+    height: 300px;
+    width: 500px;
+}
+
+#footer>div {
+    margin-top: 48px;
+    height: 100%;
+}
+
+.sitemap {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    justify-content: right;
+}
+
+.sitemap h2 {
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.sitemap a {
+    text-decoration: none;
+    color: black;
 }
